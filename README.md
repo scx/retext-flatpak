@@ -54,7 +54,7 @@ $ flatpak install "flathub" "org.kde.Platform//5.11"
 ### Build
 
 ```
-$ mkdir -p "build" && flatpak-builder "build" "me.mitya57.ReText.yaml" --force-clean --install-deps-from="flathub"
+$ flatpak-builder "build" "me.mitya57.ReText.yaml" --force-clean --install-deps-from="flathub"
 ```
 
 ### Test
