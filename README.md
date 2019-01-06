@@ -101,7 +101,7 @@ See also: [Building your first Flatpak](http://docs.flatpak.org/en/latest/first-
 
 [No](https://github.com/flatpak/flatpak/issues/1557). It is a [MATE](https://github.com/mate-desktop)/[marco](https://github.com/mate-desktop/marco) [issue](https://github.com/mate-desktop/marco/issues/301).
 
-### Why not use an RPM package?
+### Why not a RPM package?
 
 This is not always possible. For example, for EL7:
 
@@ -127,5 +127,5 @@ No, I only created the flatpak package for it.
 
 See also:
 
-* [ReText readme](https://github.com/retext-project/retext/blob/master/README.md)
+* [GitHub repo](https://github.com/retext-project/retext)
 
