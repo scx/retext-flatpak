@@ -44,15 +44,17 @@ See also:
 ### Prepare
 
 ```
-$ flatpak install "flathub" "org.kde.Sdk//5.11"
+$ flatpak --user install "flathub" "org.kde.Sdk//5.11"
 ```
 
 ```
-$ flatpak install "flathub" "org.kde.Platform//5.11"
+$ flatpak --user install "flathub" "org.kde.Platform//5.11"
 ```
 
+Clone this repository, then checkout the right branch.
+
 ```
-$ flatpak install "flathub" "io.qt.qtwebkit.BaseApp//5.11"
+$ flatpak --user install "flathub" "io.qt.qtwebkit.BaseApp//5.11"
 ```
 
 ### Build
@@ -67,11 +69,13 @@ $ flatpak-builder "build" "me.mitya57.ReText.yaml" --force-clean --install-deps-
 $ flatpak-builder --run "build" "me.mitya57.ReText.yaml" "sh"
 ```
 
-### Install
+### Create repo
 
 ```
 $ flatpak-builder --repo="repo" --force-clean "build" "me.mitya57.ReText.yaml"
 ```
+
+### Install
 
 ```
 $ flatpak --user remote-add --no-gpg-verify "retext" "repo"
@@ -84,7 +88,7 @@ $ flatpak --user install "retext" "me.mitya57.ReText"
 ### Run
 
 ```
-$ flatpak run "me.mitya57.ReText"
+$ flatpak --user run "me.mitya57.ReText"
 ```
 
 ### Uninstall
@@ -97,7 +101,24 @@ $ flatpak --user uninstall "me.mitya57.ReText"
 $ flatpak --user remote-delete "retext"
 ```
 
-See also: [Building your first Flatpak](http://docs.flatpak.org/en/latest/first-build.html)
+### Build single-file bundle
+
+```
+$ flatpak build-bundle "repo" "retext.flatpak" "me.mitya57.ReText" --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+```
+
+### Install single-file bundle
+
+If you have already [installed](#install) the package, you have to [uninstall](#uninstall) it before continuing.
+
+```
+$ flatpak --user install "retext.flatpak"
+```
+
+See also:
+
+* [Building your first Flatpak](http://docs.flatpak.org/en/latest/first-build.html)
+* [Single-file bundles](http://docs.flatpak.org/en/latest/single-file-bundles.html#single-file-bundles)
 
 ## FAQ
 
@@ -124,6 +145,8 @@ Please remember to enable **rh-python36** on EL7.
 ```
 scl enable rh-python36 bash
 ```
+
+Update: **python3** is now part of the main repo, and EPEL provides the **python36-qt5** package.
 
 ### Are you the author of ReText?
 
