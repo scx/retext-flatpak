@@ -136,6 +136,8 @@ This is not always possible. For example, for EL7:
 * **python3-qt5** package depends on **python3-sip** package. The **sip** package is available in EL7, but without **python3** support.
 * **python-qt5** requires **sip** >= *4.18*, but EL7 provides only *4.14.6* version. The **sip** package in EL7 has not been updated since the system was released (in 2014).
 
+Update: **python3** is now part of the main repo, and EPEL7 provides the **python36-qt5** package. Moreover, there is **python36-docutils** in EPEL7. However, you still have to provide **python3-enchant**, **python3-markups** and **python3-textile** on your own. But what's worse, **python36-markdown** from EPEL7 is too old to satisfy the program requirements.
+
 ### How to create module manifest for a PIP package?
 
 You can use [Flatpak PIP Generator](https://github.com/flatpak/flatpak-builder-tools/tree/master/pip) from [Flatpak Builder Tools](https://github.com/flatpak/flatpak-builder-tools) repository.
@@ -146,7 +148,7 @@ Please remember to enable **rh-python36** on EL7.
 scl enable rh-python36 bash
 ```
 
-Update: **python3** is now part of the main repo, and EPEL provides the **python36-qt5** package.
+Update: **python3** is now part of the main repo.
 
 ### Are you the author of ReText?
 
