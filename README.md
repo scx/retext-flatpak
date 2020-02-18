@@ -78,11 +78,11 @@ $ flatpak-builder --repo="repo" --force-clean "build" "me.mitya57.ReText.yaml"
 ### Install
 
 ```
-$ flatpak --user remote-add --no-gpg-verify "retext" "repo"
+$ flatpak --user remote-add --no-gpg-verify "retext-kde5.12" "repo"
 ```
 
 ```
-$ flatpak --user install "retext" "me.mitya57.ReText"
+$ flatpak --user install "retext-kde5.12" "me.mitya57.ReText"
 ```
 
 ### Run
@@ -98,7 +98,7 @@ $ flatpak --user uninstall "me.mitya57.ReText"
 ```
 
 ```
-$ flatpak --user remote-delete "retext"
+$ flatpak --user remote-delete "retext-kde5.12"
 ```
 
 ### Build single-file bundle
