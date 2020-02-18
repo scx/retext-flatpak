@@ -44,17 +44,17 @@ See also:
 ### Prepare
 
 ```
-$ flatpak --user install "flathub" "org.kde.Sdk//5.11"
+$ flatpak --user install "flathub" "org.kde.Sdk//5.12"
 ```
 
 ```
-$ flatpak --user install "flathub" "org.kde.Platform//5.11"
+$ flatpak --user install "flathub" "org.kde.Platform//5.12"
 ```
 
 Clone this repository, then checkout the right branch.
 
 ```
-$ flatpak --user install "flathub" "io.qt.qtwebkit.BaseApp//5.11"
+$ flatpak --user install "flathub" "io.qt.qtwebkit.BaseApp//5.12"
 ```
 
 ### Build

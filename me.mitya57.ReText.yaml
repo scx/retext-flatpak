@@ -1,14 +1,12 @@
 app-id: me.mitya57.ReText
 base: io.qt.qtwebkit.BaseApp
-base-version: '5.11'
+base-version: '5.12'
 runtime: org.kde.Platform
-# Do not update to version >= 5.12
-# https://github.com/flathub/io.qt.qtwebkit.BaseApp/issues/14
 # Do not update to version >= 5.13
 # EOFError: Received 0 bytes from socket while more bytes were expected. Did the sender process exit unexpectedly?
 # Do not update to version >= 5.14
 # https://github.com/flathub/io.qt.qtwebkit.BaseApp/issues/19
-runtime-version: '5.11'
+runtime-version: '5.12'
 sdk: org.kde.Sdk
 command: retext
 rename-icon: retext
@@ -41,7 +39,7 @@ finish-args:
   # https://github.com/flatpak/flatpak/issues/1957#issuecomment-412860191
   #- --env=XDG_CURRENT_DESKTOP=KDE
   # Python
-  - --env=PYTHONPATH=/app/lib/python3.5/site-packages
+  - --env=PYTHONPATH=/app/lib/python3.7/site-packages
   # OpenGL access
   # libGL error: failed to open drm device: No such file or directory
   # libGL error: failed to load driver: i965
